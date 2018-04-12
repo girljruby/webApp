@@ -1,6 +1,11 @@
 # README
 
-First to create data model:
+
+
+[Example from this link](https://www.railstutorial.org/book/toy_app#sec-planning_the_application) 
+
+
+## 1. First to create data model:
 
 The typical first step when making a web application is to create a data model, which is a representation of the structures needed by our application. In our case, the toy app will be a Twitter-style microblog, with only users and short (micro)posts.
 
@@ -18,3 +23,15 @@ to migrate the database using
 # rails db:migrate
 
 
+Rake is Ruby make,
+Before Rails 5, Ruby on Rails used Rake extensively, so for the sake of legacy Rails applications it’s important to know how to use it. Probably the two most common Rake commands in a Rails context are rake db:migrate (to update the database with a data model) and rake test (to run the automated test suite). In these and other uses of rake, it’s important to ensure that the command uses the version of Rake corresponding to the Rails application’s Gemfile, which is accomplished using the Bundler command bundle exec. Thus, the migration command
+
+  $ rake db:migrate
+
+would be written as
+
+  $ bundle exec rake db:migrate
+  
+  
+  Start the app:
+  $ rails server
